@@ -1,0 +1,19 @@
+  <h1 class="text-danger">QR Code Generated</h1>
+
+ <!-- QR Code Component  -->
+<qrcode 
+(qrCodeURL)="onChange($event)" 
+[qrdata]="qrdata" 
+[width]="300"
+[scale]="1"
+[colorDark]="'#ffffffff'"  
+[colorLight]="'#000'"
+[allowEmptyString]="true"
+[ariaLabel]="'QR Code image with the following content...'" 
+>
+</qrcode>
+
+ <!-- Input field bound to the same qrdata  -->
+<input type="text" [(ngModel)]="qrdata" placeholder="Enter QR code data">  
+
+<a [href]="qrCodeDownloadLink">Download</a>
